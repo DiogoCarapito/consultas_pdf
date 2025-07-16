@@ -1,39 +1,38 @@
-# python_project_template
+# consultas_pdf
 
 [![Github Actions Workflow](https://github.com/DiogoCarapito/python_project_template/actions/workflows/main.yaml/badge.svg)](https://github.com/DiogoCarapito/python_project_template/actions/workflows/main.yaml)
 
-Personal python project template
+conversor de .pdf para .csv e .xlsx em PyQt6
 
 Python version: 3.12
 
-## cheat sheet
+## como usar
+### criar um ambiente virtual (venv)
 
-### setup
-
-move all files and folders to the current project folder
-
-```bash
-mv python_project_template/{*,.*} . && rm -r python_project_template/
-```
-
-### venv
-
-create venv
+criar venv
 
 ```bash
 python3.12 -m venv .venv
 ```
 
-activate venv
+activatar o ambiente virtual
 
 ```bash
 source .venv/bin/activate
 ```
 
-### Docker
-
-build docker image
+### instalar as dependências
 
 ```bash
-docker build -t main:latest .
+make install
 ```
+
+### executar o programa
+
+```bash
+python main.py <pasta ou ficheiro>
+```
+
+sendo que a pasta ou ficheiro é o caminho para o ficheiro ou pasta que se pretende processar com os ficheiros .pdf para converter.
+
+irão ser criados os ficheiros .csv e .xlsx na pasta *processed*
